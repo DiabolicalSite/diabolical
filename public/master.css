@@ -1,8 +1,239 @@
-@font-face {
-  font-family: 'igra_sansregular';
-  src: url("igrasans-webfont.woff2") format("woff2"), url("igrasans-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-h1 {
-  font-family: 'igra_sansregular', serif; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: IgraSans;
+  src: url("./assets/fonts/IgraSans.otf"); }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Ubuntu", sans-serif; }
+
+div.banner {
+  background: #313537;
+  width: 90%;
+  margin-left: auto;
+  -webkit-box-shadow: 11px 12px 16px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 11px 12px 16px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 11px 12px 16px -5px rgba(0, 0, 0, 0.75); }
+  div.banner div.logo-container {
+    position: absolute;
+    border: 3px solid #FFFFFF;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding: 5px;
+    text-align: center;
+    background: #313537;
+    top: 10px;
+    left: 10px;
+    -webkit-box-shadow: 11px 12px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 11px 12px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 11px 12px 16px -5px rgba(0, 0, 0, 0.75); }
+    div.banner div.logo-container img {
+      height: 100%; }
+
+h1.title {
+  color: #FFFFFF;
+  font-family: "IgraSans", sans-serif;
+  text-align: right;
+  padding: 15px;
+  padding-top: 20px;
+  letter-spacing: 3px;
+  margin-top: 35px;
+  font-size: .7em; }
+
+@media (min-width: 375px) {
+  h1.title {
+    font-size: 1em; } }
+
+@media (min-width: 414px) {
+  h1.title {
+    font-size: 1.15em; } }
+
+div.tonight {
+  width: 300px;
+  margin: auto;
+  padding-top: 40px; }
+
+.tonight-header {
+  font-family: "Ubuntu", sans-serif;
+  padding-left: 10px;
+  letter-spacing: 2px;
+  color: #454545;
+  display: inline-block; }
+
+div.tonight-info {
+  margin-top: 10px;
+  background: url("./assets/images/band.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 10px 10px;
+  height: 150px;
+  width: 300px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  letter-spacing: 5px;
+  -webkit-box-shadow: 0px 10px 14px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 14px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 14px -9px rgba(0, 0, 0, 0.75); }
+  div.tonight-info h1.time {
+    color: #FFFFFF;
+    height: 60%; }
+  div.tonight-info h4 {
+    color: #FFFFFF;
+    text-align: right; }
+  div.tonight-info h4.headline {
+    font-size: 1.2em;
+    padding: 5px 0;
+    font-weight: 400; }
+
+section.featured-records {
+  width: 100%; }
+  section.featured-records div.featured {
+    position: relative; }
+    section.featured-records div.featured img {
+      width: 100%; }
+    section.featured-records div.featured div.featured-data {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.5);
+      width: 100%;
+      text-align: right;
+      font-family: "Ubuntu", sans-serif;
+      color: #454545;
+      letter-spacing: 5px;
+      padding: 10px;
+      font-size: .7rem; }
+
+section.mobile-calendar {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  border-top: 1px solid #454545;
+  padding: 25px 40px; }
+  section.mobile-calendar div.mobile-calendar-header {
+    margin-left: 5px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2em; }
+  section.mobile-calendar div.event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    background: #313537;
+    font-weight: 300;
+    letter-spacing: 4px;
+    font-size: .75rem;
+    padding: 20px;
+    margin: 25px 0; }
+  section.mobile-calendar div.calendar-link {
+    text-align: right; }
+    section.mobile-calendar div.calendar-link div {
+      display: inline-block;
+      font-size: .75rem; }
+
+.sq-icon {
+  position: relative;
+  padding: 3px;
+  border: 1px solid #454545;
+  color: #454545;
+  letter-spacing: 5px;
+  background: #FFFFFF; }
+
+.sq-icon:after, .sq-icon:before {
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  height: 100%;
+  width: 100%;
+  content: "";
+  outline: 1px solid #454545;
+  z-index: -1;
+  background: #FFFFFF; }
+
+.sq-icon:before {
+  position: absolute;
+  top: -6px;
+  left: 6px;
+  z-index: -2; }
+
+section.turntable {
+  text-align: auto; }
+  section.turntable img {
+    width: 100%; }
+
+section.soc-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  section.soc-icons img {
+    padding: 25px; }
+
+section.footer {
+  text-align: center;
+  padding: 10px;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: .75rem;
+  letter-spacing: 3px;
+  background: #454545; }
+
+section.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 1rem;
+  letter-spacing: 5px;
+  color: #FFFFFF;
+  font-weight: 300;
+  background: #313537;
+  -webkit-box-shadow: 1px -1px 7px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px -1px 7px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px -1px 7px 1px rgba(0, 0, 0, 0.75); }
